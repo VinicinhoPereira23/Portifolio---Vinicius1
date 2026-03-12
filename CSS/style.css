@@ -458,6 +458,7 @@ html {
      /* display: inline-block; */
      margin-top: 20px;
 }
+
 .dec a:hover{
     color: var(--text-secondary);
     transition: 0.6s;
@@ -473,7 +474,7 @@ html {
     height: 400px;
     border-radius: 15px;
 
-    background-image: url("../assests/image.jpg ");
+    background-image: url("../assests/image.jpg");
     background-size: cover;
     background-position: center;
 
@@ -597,8 +598,206 @@ html {
     transition: 0.6s;
 }
 
+.dec1 .seta{
+    padding-left: 14px;
+}
+.dec .seta{
+    padding-left: 14px;
+}
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin-top:200px;
+  gap: 50px;
+}
 
+/* Tipografia */
+.contact-section h1 {
+  font-size: 80px;
+  line-height: 0.9;
+  margin-bottom: 30px;
+  color:var(--text-primary);
+}
 
+.contact-section  h1 em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.email-container {
+  margin: 40px 0;
+  font-weight: bold;
+}
+.email-container a{
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.email-container a:hover{
+    color: var(--text-secondary);
+    transition: 0.6s;
+}
+
+.email-container .icon { color: #f1b90d; margin-right: 10px; }
+
+.social-links a{
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.social-links a:hover{
+    transition: 0.6s;
+    color: #ffffff;
+}
+
+/* Formulário */
+.contact-form-container {
+  background: transparent;
+  border: 1px solid #222;
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-group { margin-bottom: 25px; }
+
+.input-group label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  padding: 12px;
+}
+
+/* O Botão e a Seta */
+.btn-send {
+  width: 100%;
+  background: #f1b90d;
+  border: none;
+  padding: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.seta-btn {
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.btn-send:hover .seta-btn {
+  transform: translateX(10px); /* A seta desliza ao passar o mouse */
+}
+footer {
+  width: 100%;
+  background: #0d0d12;
+  border-top: 1px solid #1e1e2e;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: #e8e2d0;
+}
+
+.footer-brand span {
+  color: #6b6880;
+  font-weight: 400;
+}
+
+.footer-tagline {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: #4a4862;
+  font-style: italic;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-location {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #4a4862;
+  text-transform: uppercase;
+}
+
+/* ── Cubo 3D ── */
+.cube-wrap {
+  width: 24px;
+  height: 24px;
+  perspective: 70px;
+  flex-shrink: 0;
+}
+
+.cube {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-22deg) rotateY(35deg);
+  margin: 4px auto 0;
+  animation: cubespin 7s linear infinite;
+}
+
+@keyframes cubespin {
+  from { transform: rotateX(-22deg) rotateY(35deg); }
+  to   { transform: rotateX(-22deg) rotateY(395deg); }
+}
+
+.face {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 0.5px solid rgba(220, 165, 40, 0.5);
+}
+
+.front  { background: rgba(228, 180, 60,  0.92); transform: translateZ(7.5px); }
+.back   { background: rgba(158, 108, 28,  0.92); transform: rotateY(180deg)  translateZ(7.5px); }
+.right  { background: rgba(178, 132, 34,  0.92); transform: rotateY(90deg)   translateZ(7.5px); }
+.left   { background: rgba(138, 92,  24,  0.92); transform: rotateY(-90deg)  translateZ(7.5px); }
+.top    { background: rgba(248, 200, 80,  0.98); transform: rotateX(90deg)   translateZ(7.5px); }
+.bottom { background: rgba(118, 76,  18,  0.92); transform: rotateX(-90deg)  translateZ(7.5px); }
 
 
 @keyframes pulse {
